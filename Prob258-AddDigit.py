@@ -27,3 +27,10 @@ class Solution:
                 num=sum1
                 sum1=0
         return sum1
+
+#Another Solution
+class Solution1:
+    def addDigits(self, num: int) -> int:
+        while num // 10 > 0:
+            num = sum([int(i) for i in str(num)])
+        return num
