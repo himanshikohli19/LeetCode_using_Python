@@ -29,7 +29,7 @@ Input: s = ""
 Output: 0
 '''
 
-class Solution(object):
+class Solution1(object):
     def lengthOfLongestSubstring(self, s):
         str1 = ''
         max1 = 0
