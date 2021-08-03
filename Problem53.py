@@ -1,6 +1,6 @@
+#PROBLEM NO. 53
+# Maximum Subarray
 '''
-53. Maximum Subarray
-
 Given an integer array nums, find the contiguous subarray
 (containing at least one number) which has the largest sum and return its sum.
 
@@ -20,3 +20,14 @@ Example 3:
 Input: nums = [5,4,-1,7,8]
 Output: 23
 ''' 
+class Solution:
+    def maxSubArray(self, A):
+        if not A:
+            return 0
+
+        curSum = maxSum = A[0]
+        for num in A[1:]:
+            curSum = max(num, curSum + num)
+            maxSum = max(maxSum, curSum)
+
+        return maxSum
